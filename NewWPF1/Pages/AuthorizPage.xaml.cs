@@ -24,5 +24,22 @@ namespace NewWPF1.Pages
         {
             InitializeComponent();
         }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var login = LoginTb.Text;
+            var password = PasswordTb.Password;
+            var loginUser = "Admin";
+            var passwordUser = "admin123";
+            if (login == loginUser && password == passwordUser)
+            {
+                MessageBox.Show("Здравствуй админ");
+                NavigationService.Navigate(new AnketaPage());
+            }
+            else
+            {
+                MessageBox.Show("Пошел нафиг ворюга");
+            }
+        }
     }
 }

@@ -1,0 +1,141 @@
+﻿<Page x:Class="NewWPF1.Pages.AnketaPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NewWPF1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AnketaPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Анкета" 
+           Grid.Column="0" 
+           Grid.Row="0"
+           Grid.ColumnSpan="1"
+           FontSize="35"
+           FontWeight="Bold"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"/>
+        <StackPanel Grid.Column="0"
+            Grid.Row="1"
+            Grid.ColumnSpan="4"
+            Orientation="Horizontal">
+            <TextBlock Text="Введите имя:"
+               FontSize="25"
+               FontWeight="Heavy"
+               VerticalAlignment="Center"
+               />
+            <TextBox x:Name="NameTb"
+             Width="200"
+             Height="40"
+             VerticalAlignment="Center"
+             Margin="100 0 0 0"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0"
+            Grid.Row="2"
+            Grid.ColumnSpan="4"
+            Orientation="Horizontal">
+            <TextBlock Text="Пол:"
+                FontSize="25"
+                FontWeight="Heavy"
+                VerticalAlignment="Center"/>
+            <StackPanel Grid.Column="1"
+            Grid.Row="3"
+            Grid.ColumnSpan="4"
+            Orientation="Horizontal"
+                        Margin="210 0 0 0">
+                <RadioButton GroupName="gend" Content="муж." IsChecked="True" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <RadioButton GroupName="gend" Content="жен." FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="0"
+            Grid.Row="3"
+            Grid.ColumnSpan="4"
+            Orientation="Horizontal">
+            <TextBlock Text="Дата рождения:"
+                        FontSize="25"
+                        FontWeight="Heavy"
+                        VerticalAlignment="Center"/>
+            <DatePicker 
+                        Width="200"
+                        Height="30"
+                        RenderTransformOrigin="0.508,-0.938"
+                Margin="65 0 0 0"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0"
+    Grid.Row="4"
+    Grid.ColumnSpan="4"
+    Orientation="Horizontal">
+            <TextBlock Text="Любимое животное:"
+            FontSize="25"
+            FontWeight="Heavy"
+            VerticalAlignment="Center"/>
+            <ComboBox Margin="10 0 0 0"
+                      Width="200">
+                <TextBox Text="кролик"/>
+                <TextBox Text="собака"/>
+                <TextBox Text="кот"/>
+                <TextBox Text="лиса"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Column="0"
+Grid.Row="5"
+Grid.ColumnSpan="4"
+Orientation="Horizontal">
+            <TextBlock Text="Студент:"
+FontSize="25"
+FontWeight="Heavy"
+VerticalAlignment="Center"/>
+            <CheckBox Margin="160 0 0 0"
+                      Width="30"
+                      Height="30"
+                      IsChecked="False"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0"
+Grid.Row="6"
+Grid.ColumnSpan="8"
+                    Grid.RowSpan="4"
+Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    >
+            <Image Source="C:\Users\mrbulittt\source\repos\NewWPF1\NewWPF1\Pages\Images\608.jpg"
+                   Width="200"
+                   Height="200" RenderTransformOrigin="0.45,0.765"
+                   HorizontalAlignment="Left"/>
+            <TextBlock Text="Список лбимых книг:"
+FontSize="25"
+FontWeight="Heavy"
+VerticalAlignment="Center"
+                       Margin="20 0 0 0"/>
+            <ListView HorizontalAlignment="Right" Margin="10 0 0 0">
+                <TextBlock>"1984" Джордж Оруелл</TextBlock>
+                <TextBlock>"Метро 2033" Дмитрий Глуховский</TextBlock>
+                <TextBlock>"Капитанская дочка" Александр Пушкни</TextBlock>
+                <TextBlock>"Перси ДЖексон и повелитель молний"</TextBlock>
+            </ListView>
+        </StackPanel>
+        
+    </Grid>
+</Page>
