@@ -124,7 +124,7 @@ Orientation="Horizontal"
                    Width="200"
                    Height="200" RenderTransformOrigin="0.45,0.765"
                    HorizontalAlignment="Left"/>
-            <TextBlock Text="Список лбимых книг:"
+            <TextBlock Text="Список любимых книг:"
 FontSize="25"
 FontWeight="Heavy"
 VerticalAlignment="Center"
